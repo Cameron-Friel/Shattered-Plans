@@ -1,16 +1,16 @@
-function Attack(clickX, clickY, destX, destY) {
+class Attack {
+  constructor(clickX, clickY, destX, destY) {
+    this.startX = clickX;
+    this.startY = clickY;
+    this.endX = destX;
+    this.endY = destY;
+    this.diameter = 50; // value of node size
 
-  this.startX = clickX;
-  this.startY = clickY;
-  this.endX = destX;
-  this.endY = destY;
-  this.diameter = 50; //value of node size
+    this.node = 0;
+    this.owner = 'green'; // value
+  }
 
-  this.node = 0;
-  this.owner = 'green';//value
-
-  this.move = function() {
-
+  move() {
     if (this.startX > this.endX)
     {
       if (this.startY === this.endY)
@@ -54,10 +54,9 @@ function Attack(clickX, clickY, destX, destY) {
           this.startY += 1;
         }
     }
-}
+  }
 
-  this.display = function() {
-
+  display() {
     fill(this.owner);
     ellipse(this.startX, this.startY, this.diameter, this.diameter);
     fill('black');
