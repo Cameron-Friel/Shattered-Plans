@@ -21,5 +21,5 @@ node --version
 ```
 node server.js
 ```
-> 6. Open up two separate browser tabs and enter ```localhost:3000``` into each of them.
+> 6. Open up two separate browser tabs and enter ```localhost:3000``` into each of them. If you using two different machines on the same network then enter in ```yourIpAdress:3000```.
 > 7. Enjoy!
